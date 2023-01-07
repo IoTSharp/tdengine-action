@@ -14,7 +14,7 @@ steps:
   - name: Check out repo
     uses: actions/checkout@v2
   - name: Setup TDengine
-    uses: iotsharp/tdengine-action@v1
+    uses: iotsharp/tdengine-action@v2
     with:
       influxdb_version: latest
 ```
@@ -25,7 +25,7 @@ steps:
   - name: Check out repo
     uses: actions/checkout@v2
   - name: Setup TDengine
-    uses: iotsharp/tdengine-action@v1
+    uses: iotsharp/tdengine-action@v2
     with:
       influxdb_version: latest
       influxdb_start: false
@@ -37,7 +37,7 @@ steps:
   - name: Check out repo
     uses: actions/checkout@v2
   - name: Setup TDengine
-    uses: iotsharp/tdengine-action@v1
+    uses: iotsharp/tdengine-action@v2
     with:
       influxdb_version: 3.0.2.1
 
