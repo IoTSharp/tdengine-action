@@ -14,11 +14,5 @@ rm -r TDengine-server.tar.gz
 cd  $(ls TDengine-server*  -d)
 sudo ./install.sh
 
-cd /tmp
-curl -o TDengine-client.tar.gz $TDENGINE_DOWNLOAD_PATH/TDengine-client-$TDENGINE_VERSION-Linux-x64.tar.gz 
-tar  -xvf TDengine-client.tar.gz 
-rm TDengine-client.tar.gz -f 
-cd  $(ls TDengine-client*  -d)
-./install_client.sh
 
 cd -
