@@ -1,7 +1,7 @@
 
 if [ "$TDENGINE_START" = "true" ]
 then
-    echo "supportVnodes             256"  >>  /etc/taos/taos.cfg
+    sudo echo "supportVnodes             256"  >>  /etc/taos/taos.cfg
     sudo    systemctl start taosd
     sudo   systemctl start taosadapter 
     export TDENGINE_REST=$(hostname):6041/rest/sql
