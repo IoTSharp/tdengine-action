@@ -6,6 +6,8 @@ then
 else
   export TDENGINE_DOWNLOAD_PATH="https://www.taosdata.com/assets-download/3.0/"
 fi
+echo $TDENGINE_VERSION
+echo $TDENGINE_DOWNLOAD_PATH
 curl -o TDengine-server.tar.gz $TDENGINE_DOWNLOAD_PATHT/TDengine-server-$TDENGINE_VERSION-Linux-x64.tar.gz  
 tar xvfz TDengine-server.tar.gz
 rm -r TDengine-server.tar.gz
