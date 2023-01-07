@@ -1,0 +1,26 @@
+name: 'TDengine Action'
+description: 'Install and configure TDengine and the TDengine CLI.'
+branding:
+  icon: 'database'
+  color: 'gray-dark'
+inputs:
+  tdengine_version:
+    description: 'Sets the version of TDengine to use (for example: 3.0.2.1). See https://docs.taosdata.com/get-started/package/ for versions. latest  are also supported.'
+    required: true
+  tdengine_start:
+    description: 'Set to false if you only need to use the cli tools without a locally running TDengine instance. If this is false, you can ignore the init parameters.'
+    required: false
+    default: true
+runs:
+  using: "composite"
+  steps:
+    - name: Download and Install TDengine
+      run: |
+        export TDENGINE_VERSION=${{inputs.tdengine_version}}
+        ${{ github.action_path }}/install-tdengine.sh
+      shell: bash
+    - name: Configure TDengine
+      run: |
+        export TDENGINE_START=${{inputs.tdengine_start}}
+        ${{ github.action_path }}/setup-tdengine.sh
+      shell: bash
