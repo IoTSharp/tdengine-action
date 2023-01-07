@@ -17,10 +17,12 @@ runs:
     - name: Download and Install TDengine
       run: |
         export TDENGINE_VERSION=${{inputs.tdengine_version}}
+        chmod 777 ${{ github.action_path }}/install-tdengine.sh
         ${{ github.action_path }}/install-tdengine.sh
       shell: bash
     - name: Configure TDengine
       run: |
         export TDENGINE_START=${{inputs.tdengine_start}}
+        chmod 777 ${{ github.action_path }}/setup-tdengine.sh
         ${{ github.action_path }}/setup-tdengine.sh
       shell: bash
