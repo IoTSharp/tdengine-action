@@ -1,6 +1,7 @@
 
 if [ "$TDENGINE_START" = "true" ]
 then
+    export TAOS_SUPPORT_VNODES=256
     sudo systemctl start taosd
     sudo systemctl start taosadapter 
     export TDENGINE_REST=$(hostname):6041/rest/sql
