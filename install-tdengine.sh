@@ -8,13 +8,13 @@ else
 fi
 echo $TDENGINE_VERSION
 echo $TDENGINE_DOWNLOAD_PATH
-curl -o TDengine-server.tar.gz $TDENGINE_DOWNLOAD_PATHT/TDengine-server-$TDENGINE_VERSION-Linux-x64.tar.gz  
+curl -o TDengine-server.tar.gz $TDENGINE_DOWNLOAD_PATH/TDengine-server-$TDENGINE_VERSION-Linux-x64.tar.gz  
 tar xvfz TDengine-server.tar.gz
 rm -r TDengine-server.tar.gz
 cd  TDengine-server
 sudo ./install.sh
 
-curl -o TDengine-client.tar.gz $TDENGINE_DOWNLOAD_PATHT/TDengine-client-$TDENGINE_VERSION-Linux-x64.tar.gz 
+curl -o TDengine-client.tar.gz $TDENGINE_DOWNLOAD_PATH/TDengine-client-$TDENGINE_VERSION-Linux-x64.tar.gz 
 tar  -xvf TDengine-client.tar.gz 
 rm TDengine-client.tar.gz -f 
 cd  $(ls TDengine-client*  -d)
