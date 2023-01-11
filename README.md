@@ -16,7 +16,7 @@ steps:
   - name: Setup TDengine
     uses: iotsharp/tdengine-action@v2
     with:
-      influxdb_version: latest
+      tdengine_version: latest
 ```
 
 ### Install but don't start TDengine ( CLI Tooling Only)
@@ -27,8 +27,8 @@ steps:
   - name: Setup TDengine
     uses: iotsharp/tdengine-action@v2
     with:
-      influxdb_version: latest
-      influxdb_start: false
+      tdengine_version: latest
+      tdengine_start: false
 ```
 
 ### Use a specific version of TDengine
@@ -39,6 +39,6 @@ steps:
   - name: Setup TDengine
     uses: iotsharp/tdengine-action@v2
     with:
-      influxdb_version: 3.0.2.1
+      tdengine_version: 3.0.2.1
 
 ```
