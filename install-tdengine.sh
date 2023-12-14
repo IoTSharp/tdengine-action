@@ -8,7 +8,7 @@ else
 fi
 echo $TDENGINE_VERSION
 echo $TDENGINE_DOWNLOAD_PATH
-curl -o TDengine-server.tar.gz $TDENGINE_DOWNLOAD_PATH/TDengine-server-$TDENGINE_VERSION-Linux-x64.tar.gz  
+curl  -s -o TDengine-server.tar.gz $TDENGINE_DOWNLOAD_PATH/TDengine-server-$TDENGINE_VERSION-Linux-x64.tar.gz  
 tar xvfz TDengine-server.tar.gz
 rm -r TDengine-server.tar.gz
 cd  $(ls TDengine-server*  -d)
