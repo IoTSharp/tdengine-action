@@ -13,7 +13,6 @@ then
     until  curl -L -H "Authorization: Basic cm9vdDp0YW9zZGF0YQ=="   -d "SELECT SERVER_STATUS();"  $TDENGINE_REST ; do 
         sleep 1 ;
         let count+=1; 
-       /usr/bin/taosd
         if [ "$count" -lt 20 ]; then exit -1 ; fi
     done
 fi
