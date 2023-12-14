@@ -13,7 +13,7 @@ tar xvfz TDengine-server.tar.gz
 rm -r TDengine-server.tar.gz
 cd  $(ls TDengine-server*  -d)
 sudo ./install.sh -h
-sudo ./install.sh -v serve  -e yes
+sudo ./install.sh -v server  -e yes
 sudo ./start-all.sh
 
 cd -
