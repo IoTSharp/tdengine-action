@@ -12,7 +12,7 @@ curl  -s -o TDengine-server.tar.gz $TDENGINE_DOWNLOAD_PATH/TDengine-server-$TDEN
 tar xvfz TDengine-server.tar.gz
 rm -r TDengine-server.tar.gz
 cd  $(ls TDengine-server*  -d)
-sudo ./install.sh -e no
+sudo ./install.sh -h
 
 
 cd -
