@@ -6,8 +6,7 @@ then
     sudo echo "supportVnodes             256"  >>  /etc/taos/taos.cfg
     sudo systemctl start taosd
     sudo systemctl start taosadapter
-    sudo systemctl start taosx
-    sudo systemctl start taos-explorer
+    sudo systemctl start taoskeeper
     export TDENGINE_REST=$(hostname):6041/rest/sql
     count=0
     until  curl -L -H "Authorization: Basic cm9vdDp0YW9zZGF0YQ=="   -d "SELECT SERVER_STATUS();"  $TDENGINE_REST ; do 
