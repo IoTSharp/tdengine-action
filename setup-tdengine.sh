@@ -9,10 +9,11 @@ then
     sudo systemctl start taoskeeper
     export TDENGINE_REST=$(hostname):6041/rest/sql
     count=0
+    sleep 5
     until  curl -L -H "Authorization: Basic cm9vdDp0YW9zZGF0YQ=="   -d "SELECT SERVER_STATUS();"  $TDENGINE_REST 
     do
-        sleep 1;
-        let count+=1; 
-        if [ "$count" -lt 20 ]; then exit -1 ; fi
+        sleep 1
+        let count+=1
+        if [ "$count" -gt 20 ]; then exit -1 ; fi
     done
 fi
