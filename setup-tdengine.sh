@@ -1,6 +1,7 @@
 
 if [ "$TDENGINE_START" = "true" ]
 then
+    sudo chmod  777 /etc/taos/taos.cfg
     sudo echo "supportVnodes             256"  >>  /etc/taos/taos.cfg
     sudo systemctl start taosd
     sudo systemctl start taosadapter
